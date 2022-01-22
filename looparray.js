@@ -44,51 +44,34 @@ const restaurant = {
       } will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
+    );
+  },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
-//Retrieving Array in a classic way
-const arr = [2, 3, 4];
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
+//Looping Arrays: The for-of loop
 
-//New way to retrieve - Destructuring
-const [x, y, z] = arr;
-console.log(x, y, z);
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-//Can retrieve array even if not complete, just 1st and 2nd element
-//Just leave a space in between to retrieve other array place
-let [main, , secondary] = restaurant.categories;
-console.log(main, secondary);
+//This loop is meant to give you just the current element.
+for (const item of menu) console.log(item);
 
-//Usual way of Switching without destructuring
-// const temp = main;
-// main = secondary;
-// secondary = temp;
-// console.log(main, secondary); //Switched
+//item[0] = array position / item[1] = array data
+// for (const item of menu.entries()) {
+//   console.log(`${item[0] + 1}: ${item[1]}`);
+// }
 
-//New Switching
-[main, secondary] = [secondary, main];
-console.log(main, secondary);
+//item[0] = array position / item[1] = array data
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
 
-//
-let arr2 = [1, 2];
-let arr3 = [3, 4];
-[arr2, arr3] = [arr3, arr2];
-console.log(arr2, arr3);
-
-// Receive 2 return values from a function
-const [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
-
-const nested = [2, 4, [5, 6]];
-// const [i, , j] = nested;
-// console.log(i, j);
-
-//Destructuring Nested Arrays
-const [i, , [j, k]] = nested;
-console.log(i, j, k);
-
-// Default Values - Assigning Default values will prevent getting undefined from smaller array.
-const [p = 1, q = 1, r = 1] = [8, 9];
-console.log(p, q, r);
+// console.log([...menu.entries()]);
