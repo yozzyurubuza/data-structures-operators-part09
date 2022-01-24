@@ -9,8 +9,6 @@ const convertButton = document.querySelector('button');
 convertButton.addEventListener('click', function () {
   const text = document.querySelector('textarea').value;
 
-  //text = ['  asd_qwe    ', '  asd_qwe2    ', '  asd_qwe3    '];
-
   //Put text into array - Should only accept the word with the pattern a_b
   //Convert everything into lowercase for easier manipulation
   console.log(text);
@@ -33,7 +31,7 @@ convertButton.addEventListener('click', function () {
   for (const camel of splitText) {
     //1. Remove Spaces, 2. remove underscore, 3. uppercase B from a_b into uppercase, 3.1 Join, 4. padend spaces, 5.insert repeat emoji based on array size
 
-    //1-2-4
+    //1-2
     let tempCamel = [];
     tempCamel = [...camel.trim().split('_')];
 
