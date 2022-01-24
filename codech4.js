@@ -29,7 +29,7 @@ convertButton.addEventListener('click', function () {
   const camelText = [];
 
   for (const camel of splitText) {
-    //1. Remove Spaces, 2. remove underscore, 3. uppercase B from a_b into uppercase, 3.1 Join, 4. padend spaces, 5.insert repeat emoji based on array size
+    //1. Remove Spaces, 2. remove underscore, 3. uppercase B from a_b, 3.1 Join, 4. PadEnd spaces, 5. Insert repeat emoji based on array size
 
     //1-2
     let tempCamel = [];
