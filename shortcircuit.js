@@ -68,7 +68,6 @@ const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 
 /*
-
 console.log('----- OR ------');
 
 // Use ANY data type, return ANY data type, short-circuiting

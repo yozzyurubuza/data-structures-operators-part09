@@ -58,26 +58,26 @@ console.log(badNewArr);
 
 //Insert arr into newArr easily
 const newArr = [1, 2, ...arr];
-console.log(newArr);
+console.log(newArr); // [1, 2, 7, 8, 9]
 
 //Display elements of newArr seperately
-console.log(...newArr);
+console.log(...newArr); // 7, 8, 9
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+console.log(newMenu); // ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
 
 // Copy array
 const mainMenuCopy = [...restaurant.mainMenu];
-console.log(mainMenuCopy);
+console.log(mainMenuCopy); // 'Pizza', 'Pasta', 'Risotto'
 
 // Join 2 arrays
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
-console.log(menu);
+console.log(menu); // ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
 
-// Iterables: Arrays, Strings, Maps, SEts. Not Objects
+// Iterables: Arrays, Strings, Maps, Sets. Not Objects
 const str = 'Jonas';
 const letters = [...str, ' ', 'S. '];
-console.log(letters);
+console.log(letters); //['J', 'o', 'n', 'a', 's', ' ', 'S. ']
 
 console.log(...str);
 // console.log(`${...str} Schmedtmann`); Does not work
